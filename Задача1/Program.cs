@@ -17,7 +17,8 @@ for (int i = 0; i < n; i++)//*строки
     for (int j = 0; j < m; j++)//*столбцы
     {
         matrix[i,j] = ((rnd.NextDouble()* 2 - 1) * 100);//случайное вещественное число от 0 до 1 *для себя ссылка https://docs.microsoft.com/en-us/dotnet/api/system.random.nextdouble?view=netcore-3.1*
-        Console.Write("{0,6:F2}",  matrix[i, j]);
+        matrix[i,j] = Math.Round(matrix[i, j], 1);
+        Console.Write(matrix[i, j] + "\t");
     }                  //сокращение до 2-х знаков после запятой
     Console.WriteLine();
 }
